@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0">
+</head>
+
+<body>
+    <p class="title">THE SNAKE</p>
+    <div class="board"></div>
+
+    <p class="message"></p>
+
+    <div class="control">
+        <button class="userGame">Play</button>
+        <button class="chBot">ch-Bot</button>
+        <button class="mcBot">mc-bot</button>
+        <button class="reset">Reset</button>
+        <!-- <button class="mccBot">mcc-bot</button> -->
+    </div>
+
+    <table class="info">
+        <thead><th>STATS</th>
+               <th>Value</th>
+               <th>Unit</th></thead>
+        <tr><td class="label">FOOD-EATEN</td>
+            <td id="foodEaten"></td>
+            <td>(<i>number</i>)</td></tr>
+        <tr><td class="label">EATING-SPEED (<i>time</i>)</td>
+            <td id="eatingSpeedT"></td>
+            <td>(<i>sec/food</i>)</td></tr>
+        <tr><td class="label">EATING-SPEED (<i>distance</i>)</td>
+            <td id="eatingSpeedD"></td>
+            <td>(<i>meter/food</i>)</td></tr>
+        <tr><td class="label">TIME-ELAPSED</td>
+            <td id="timeElapsed"></td>
+            <td>(<i>seconds</i>)</td></tr>
+        <tr><td class="label">DISTANCE-TRAVELLED</td>
+            <td id="distanceTravelled"></td>
+            <td>(<i>meter</i>)</td></tr>
+    </table>
+
+    <script type="text/javascript" src="game.js"></script>
+    <script type="text/javascript" src="bot.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>
