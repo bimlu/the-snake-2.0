@@ -142,7 +142,7 @@ let snake = new Snake()
 class Game {
     constructor() {
         this.player = null;
-        this.speedInterval = 50;
+        this.speedInterval = 80;
         this.timerId = null;
         this.paused = true;
 
@@ -239,8 +239,8 @@ class Game {
                 document.querySelector('button.reset').hidden = false;
             
                 let message = document.querySelector('p.message');
-                message.innerHTML = `Oops! the snake crashed. Your Ate <b>${this.foodEaten}</b> 
-                food <br>with an accuracy of <b>${this.eatingSpeedD}</b> <i>meter per food</i>.`;
+                message.innerHTML = `Oops! the snake crashed. Your Ate <span style="color: red;">${this.foodEaten}</span> 
+                food <br>with an accuracy of <span style="color: red;">${this.eatingSpeedD}</span> <i>meter per food</i>.`;
         
                 return;
             }
@@ -283,7 +283,7 @@ class Game {
         this.eatingSpeedD = (this.distanceTravelled / this.foodEaten).toFixed();
         this.eatingSpeedT = (this.timeElapsed / this.foodEaten).toFixed(2);
 
-        if (this.speedInterval > 20) {
+        if (this.speedInterval > 40) {
             this.speedInterval -= 1;
         }
     }
